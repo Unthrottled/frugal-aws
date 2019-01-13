@@ -4,8 +4,9 @@ MAINTAINER Alex Simons "alexsimons9999@gmail.com"
 RUN apt-get update
 RUN apt-get install openssl
 
-ADD certGen.sh /tmp/certs
-RUN /tmp/certs/certGen.sh
+ADD certGen.sh .
+RUN chmod +x certGen.sh
+RUN ./certGen.sh
 
 RUN mkdir -p /etc/nginx/ssl
 RUN mv fullchain.pem /etc/nginx/ssl/fullchain.pem
