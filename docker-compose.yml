@@ -24,7 +24,7 @@ services:
       context: compute-app-two
     image: alexsimons/compute-app-two:1.0.0
     volumes:
-      - ./compute-app-one:/app
+      - ./compute-app-two:/app
     environment:
       - NODE_ENV=production
       - PORT=8910

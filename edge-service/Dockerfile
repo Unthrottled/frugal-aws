@@ -13,4 +13,4 @@ RUN mv fullchain.pem /etc/nginx/ssl/fullchain.pem
 RUN mv privkey.pem /etc/nginx/ssl/privkey.pem
 
 #COPY errors/ /usr/share/nginx/html/errors
-#COPY nginx.conf /etc/nginx/nginx.conf
+COPY nginx.conf /etc/nginx/nginx.conf
