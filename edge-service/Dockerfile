@@ -4,7 +4,7 @@ MAINTAINER Alex Simons "alexsimons9999@gmail.com"
 RUN apt-get update
 RUN apt-get install openssl
 
-ADD certs/ /tmp/certs
+ADD certGen.sh /tmp/certs
 RUN /tmp/certs/certGen.sh
 
 RUN mkdir -p /etc/nginx/ssl
