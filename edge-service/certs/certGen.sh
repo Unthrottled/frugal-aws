@@ -1,10 +1,10 @@
-#!/usr/bin/env bash
-sudo openssl genrsa -des3 -out privkey.pem 1024
+#!/bin/sh
+openssl genrsa -passout pass:password1 -des3 -out privkey.pem 1024
 
-sudo openssl req -new -key privkey.pem -out server.csr
+openssl req -subj '/CN=localhost.io/O=BEST COMPANY LTD./C=US' -passin pass:password1 -new -key privkey.pem -out server.csr
 
-sudo cp privkey.pem privkey.pem.org
+cp privkey.pem privkey.pem.org
 
-sudo openssl rsa -in privkey.pem.org -out privkey.pem
+openssl rsa -passin pass:password1 -in privkey.pem.org -out privkey.pem
 
-sudo openssl x509 -req -days 365 -in server.csr -signkey privkey.pem -out fullchain.pem
+openssl x509 -req -days 365 -in server.csr -signkey privkey.pem -out fullchain.pem
