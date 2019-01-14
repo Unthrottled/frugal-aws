@@ -27,4 +27,4 @@ services:
       - ./compute-app-two:/app
     environment:
       - NODE_ENV=production
-      - PORT=8910
+      - PORT=8080
