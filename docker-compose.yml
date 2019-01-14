@@ -14,11 +14,6 @@ services:
     build:
       context: compute-app-one
     image: alexsimons/compute-app-one:1.0.0
-    volumes:
-      - ./compute-app-one:/app
-    environment:
-      - NODE_ENV=production
-      - PORT=8909
   compute-app-two:
     build:
       context: compute-app-two
