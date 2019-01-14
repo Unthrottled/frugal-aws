@@ -2,7 +2,8 @@ version: "3"
 services:
   edge-service:
     build:
-      context: edge-service
+      context: .
+      dockerfile: edge-service/Dockerfile
     image: alexsimons/sample-edge-service:1.0.0
     depends_on:
       - compute-app-one
