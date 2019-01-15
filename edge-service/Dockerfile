@@ -21,5 +21,5 @@ RUN mkdir -p /etc/nginx/ssl
 RUN mv fullchain.pem /etc/nginx/ssl/fullchain.pem
 RUN mv privkey.pem /etc/nginx/ssl/privkey.pem
 
-COPY --from=static-site-builder /static-site/build /static-site
+COPY --from=static-site-builder /static-site/build /usr/share/nginx/html/static-site
 COPY /edge-service/nginx.conf /etc/nginx/nginx.conf
