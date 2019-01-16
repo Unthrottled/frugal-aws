@@ -28,6 +28,7 @@
     - Sub-Domain support
     - Quick Response Times
         - Fail Fast
+    - Path Support
 
 - How do I do all of that?
     - Organize all of your projects
@@ -43,4 +44,27 @@
     - Profit!
     - Learn how to setup things locally then draw the AWS parallel.
     
+- Local Environment Rundown
+    - Static Content Setup
+        - What do I need?
+            - Sans React:
+                - html basics
+            - React:
+                - React normally runs or localhost:3000
+                - Most react projects support a `build` task
+                    - Which creates static content in the `build` directory that has all of the goodies inside of it.
+        - How do I get?
+            - NGINX
+                - NGINX is open source software for web serving (Static content), reverse proxying, and more things.
+                    - What is a `Reverse Proxy`?
+                - Configurations
+                    - Pathing support
+                    - Proxies
+                    - Mime Types
+                    - HTTP to HTTPS
+                    - HTTPS support
+                    - Sub-Domain support
+                    - Graceful failure support
+                - Static content setup to be served
+        
         
