@@ -13,4 +13,18 @@
     
 - How do we do the things?
 
+# Structure
 
+- Who is this for?
+    - Developers who want to go to learn how to go to production on a budget.
+    
+ - What is Production Like?
+    - HTTPS
+        - HTTP -> HTTPS redirection
+        - Valid certificates
+    - Graceful failures
+        - 404 Errors
+        - Maintenance windows
+    - Sub-Domain support
+    - Quick Response Times
+        - Fail Fast
