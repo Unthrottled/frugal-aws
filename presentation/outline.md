@@ -53,18 +53,27 @@
                 - React normally runs or localhost:3000
                 - Most react projects support a `build` task
                     - Which creates static content in the `build` directory that has all of the goodies inside of it.
-        - How do I get?
-            - NGINX
-                - NGINX is open source software for web serving (Static content), reverse proxying, and more things.
-                    - What is a `Reverse Proxy`?
-                - Configurations
-                    - Pathing support
-                    - Proxies
-                    - Mime Types
-                    - HTTP to HTTPS
-                    - HTTPS support
-                    - Sub-Domain support
-                    - Graceful failure support
-                - Static content setup to be served
-        
-        
+    - Web Servers
+        - API Providers:
+            - Node
+                - Express
+            - JVM Servers
+                - Spring Boot
+    - Service Providers
+        - Mongo
+        - Postgres
+        - RabbitMQ            
+        - NGINX
+            - NGINX is open source software for web serving (Static content), reverse proxying, and more things.
+                - What is a `Reverse Proxy`?
+            - Configurations
+                - Pathing support
+                - Proxies
+                - Mime Types
+                - HTTP to HTTPS
+                - HTTPS support
+                - Sub-Domain support
+                - Graceful failure support
+            - Static content setup to be served
+    - How Do I combine all of these in production?
+        - Docker setup
