@@ -76,4 +76,8 @@
                 - Graceful failure support
             - Static content setup to be served
     - How Do I combine all of these in production?
-        - Docker setup
+        - Docker
+            - What is docker at a high level?
+            - What is Docker Compose at a high level
+            - Why do I need to docker?
+            - How do I Docker?
