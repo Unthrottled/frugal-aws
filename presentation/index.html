@@ -26,17 +26,18 @@
 			<div class="slides">
 				<section>
 					<h1>The Frugal AWS Developer</h1>
-					<h3>How to go to production on a budget</h3>
+					<h4>How to go to production on a budget</h4>
 					<p>
 						<small>Presented by <a href="http://acari.io">Alex Simons</a></small>
 					</p>
 				</section>
 
 				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
+					<h2>What's in it for you?</h2>
+					<p class="fragment fade-up">How to mimic a production like environment locally.</p>
+					<p class="fragment fade-up">How to deploy production systems <span style="font-style: italic">without</span> OpenShift.</p>
+					<p class="fragment fade-up">Get basic working knowledge AWS and some DevOps techniques.</p>
+					<p class="fragment fade-up">An understand of what costs you may be responsible for.</p>
 				</section>
 
 				<!-- Example of nested vertical slides -->
@@ -368,6 +369,7 @@ Reveal.addEventListener( 'customevent', function() {
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				history: true,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
