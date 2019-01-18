@@ -22,10 +22,10 @@
     - HTTPS
         - HTTP -> HTTPS redirection
         - Valid certificates
+    - Sub-Domain support
     - Graceful failures
         - 404 Errors
         - Maintenance windows
-    - Sub-Domain support
     - Quick Response Times
         - Fail Fast
     - Path Support
