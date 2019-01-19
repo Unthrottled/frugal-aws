@@ -285,6 +285,48 @@
         </section>
 
         <section>
+            <section>
+                <h2>Local Execution</h2>
+                <div class="fragment fade-up">
+                    <p>There will be a total of 3 websites</p>
+                    <p class="fragment fade-up">A React Web Application</p>
+                    <p class="fragment fade-up">A Spring Boot Application</p>
+                    <p class="fragment fade-up">A Express Application</p>
+                </div>
+            </section>
+            <section>
+                <h2>Entry point</h2>
+                <p class="fade-up fragment">
+                    The entry point to all of our application will be the NGINX server
+                </p>
+                <p class="fade-up fragment">
+                    All Client-Side communications will be in HTTPS
+                </p>
+            </section>
+            <section>
+                <h2>NGINX Configuration</h2>
+                <p class="fade-up fragment">
+                    Self-Signed certificates can be used for the initial HTTPS set up.
+                    Which will later be replaced by free, trusted <a href="https://github.com/certbot/certbot/tree/master/certbot-dns-route53" target="_blank">Let's Encrypt</a> certificates.
+                </p>
+                <p class="fade-up fragment">
+                    The use of Host-Headers will allow NGINX to proxy requests based off of the domain supplied.
+                </p>
+            </section>
+            <section>
+                <h2>NGINX Configuration Cont.</h2>
+                <p class="fade-up fragment">
+                    The server will also handle all graceful failure pages that the user may see while interacting with your domain.
+                </p>
+            </section>
+            <section>
+                <h2>The React Application</h2>
+                <p class="fade-up fragment">Will be accessible from https://static-site.localhost</p>
+                <p class="fade-up fragment">The static content will be served by the NGINX server</p>
+            </section>
+        </section>
+
+        <section>
             <h2>AWS Strategy</h2>
             <img src="images/AWS_ARCH.png" alt="cloud architecture">
         </section>
