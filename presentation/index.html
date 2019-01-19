@@ -343,6 +343,106 @@
             <img src="images/AWS_ARCH.png" alt="cloud architecture">
         </section>
 
+        <section>
+            <section>
+                <h2>AWS Execution</h2>
+                <div class="fragment fade-up">
+                    <p>There will be a total of 3 websites</p>
+                    <p class="fragment fade-up">A React Web Application</p>
+                    <p class="fragment fade-up">A Spring Boot Application</p>
+                    <p class="fragment fade-up">A Express Application</p>
+                </div>
+            </section>
+            <section>
+                <h2>Entry point</h2>
+                <p class="fade-up fragment">
+                    The entry point to all of our application will be the Route 53 Service
+                </p>
+                <p class="fade-up fragment">
+                    All Client-Side communications will remain in HTTPS
+                </p>
+            </section>
+            <section>
+                <h2>Route 53</h2>
+                <p class="fragment fade-up">
+                    This service is responsible for routing all of your network traffic across your hosted zone
+                    such as <code>example.com</code>
+                </p>
+                <p class="fragment fade-up">
+                    This service will cost you $0.50 a month to run a hosted zone.
+                    Plus a annual cost for domain renewal, which depends on what you choose ($12.00 a year for .com)
+                </p>
+            </section>
+            <section>
+                <h2>EC2</h2>
+                <p class="fragment fade-up">
+                    Is for our servers, this service will run our compute apps and NGINX.
+                </p>
+                <p class="fragment fade-up">
+                    Super easy instance setup for Docker CE can be found <a href="https://docs.docker.com/docker-for-aws/" target="_blank">here.</a>
+                </p>
+            </section>
+            <section>
+                <h2>EC2 Continued</h2>
+                <p class="fragment fade-up">
+                    EC2 is the most expensive service you will be interacting with.
+                </p>
+                <p class="fragment fade-up">
+                    It cost under $10 a month for a single micro instance to run.
+                    You will also pay just under $3.00 for CloudWatch (which is a logging service).
+                </p>
+            </section>
+            <section>
+                <h2>NGINX Configuration</h2>
+                <p class="fade-up fragment">
+                    HTTPS Certificates will be the free, trusted <a href="https://github.com/certbot/certbot/tree/master/certbot-dns-route53" target="_blank">Let's Encrypt</a> certificates created to your hosted zone.
+                    Provided by the Route-53 verification plugin.
+                </p>
+                <p class="fade-up fragment">
+                    The use of Host-Headers will allow NGINX to proxy requests based off of the domain supplied to the corresponding service.
+                </p>
+                <p class="fade-up fragment">
+                    The host headers will have to be different now that it will be running under an actual domain.
+                    So <strong>https://compute-app-one.localhost</strong> will turn into <strong>compute-app-one.sample-domain.com</strong>
+                </p>
+            </section>
+            <section>
+                <h2>NGINX Configuration Cont.</h2>
+                <p class="fade-up fragment">
+                    The most easy way to get your Let's Encrypt Certificates will be by running the <strong>certbot</strong> on your local machine.
+                </p>
+                <p class="fade-up fragment">
+                    This will require the AWS cli and access credentials to your account to be set up.
+                </p>
+                <p class="fade-up fragment">
+                    This will require also require for you to have Private Docker Image Repositories.
+                    Which will run you $7.00 a month and gives you 6 Private Repositories.
+                </p>
+            </section>
+            <section>
+                <h2>The Spring Application</h2>
+                <h2>The Express Application</h2>
+                <p class="fade-up fragment">Will remain the same as the local setup</p>
+            </section>
+            <section>
+                <h2>The React Application</h2>
+                <p class="fade-up fragment">Be served by CloudFront</p>
+                <p class="fade-up fragment">Certificates will be provided by the Certificate Manager</p>
+            </section>
+            <section>
+                <h2>Cloud Front</h2>
+                <p class="fade-up fragment">Is basically a CDN for your static content</p>
+                <p class="fade-up fragment">All of your content will be put on servers closer to your users, so faster response times!</p>
+            </section>
+            <section>
+                <h2>Cloud Front Continued</h2>
+                <p class="fade-up fragment">CloudFront will be fed by S3, which is just a remote file system.</p>
+                <p class="fade-up fragment">Since CloudFront caches your static content. Whenever you want to release new code you have to invalidate those caches.
+                This could cost you upwards of $0.1 a month, though I have never exceeded $0.02.
+                </p>
+            </section>
+        </section>
+
         <section data-markdown>
             <script type="text/template">
                 ## Markdown support
