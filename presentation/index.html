@@ -324,6 +324,18 @@
                 <p class="fade-up fragment">Will be accessible from https://static-site.localhost</p>
                 <p class="fade-up fragment">The static content will be served by the NGINX server</p>
             </section>
+            <section>
+                <h2>The Spring Application</h2>
+                <p class="fade-up fragment">Will be accessible from https://compute-app-one.localhost</p>
+                <p class="fade-up fragment">The static content will be served by the Spring Boot app via the NGINX proxy server.</p>
+                <p class="fade-up fragment">The NGINX server will access the spring boot server via the Docker supplied host name <strong>compute-app-one</strong></p>
+            </section>
+            <section>
+                <h2>The Express Application</h2>
+                <p class="fade-up fragment">Will be accessible from https://compute-app-two.localhost</p>
+                <p class="fade-up fragment">The static content will be served by the Express app via the NGINX proxy server.</p>
+                <p class="fade-up fragment">The NGINX server will access the spring boot server via the Docker supplied host name <strong>compute-app-two</strong></p>
+            </section>
         </section>
 
         <section>
