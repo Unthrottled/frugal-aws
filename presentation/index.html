@@ -377,6 +377,7 @@
                 <h2>EC2</h2>
                 <p class="fragment fade-up">
                     Is for our servers, this service will run our compute apps and NGINX.
+                    While EBS will save our instances data to a file system.
                 </p>
                 <p class="fragment fade-up">
                     Super easy instance setup for Docker CE can be found <a href="https://docs.docker.com/docker-for-aws/" target="_blank">here.</a>
@@ -417,6 +418,7 @@
                 <p class="fade-up fragment">
                     This will require also require for you to have Private Docker Image Repositories.
                     Which will run you $7.00 a month and gives you 6 Private Repositories.
+                    Or you could just go Hardcore mode and get your certs on your EC2 instance via SCP
                 </p>
             </section>
             <section>
@@ -427,7 +429,7 @@
             <section>
                 <h2>The React Application</h2>
                 <p class="fade-up fragment">Be served by CloudFront</p>
-                <p class="fade-up fragment">Certificates will be provided by the Certificate Manager</p>
+                <p class="fade-up fragment">Certificates will be provided by the Certificate Manager at no charge to you!</p>
             </section>
             <section>
                 <h2>Cloud Front</h2>
@@ -440,6 +442,28 @@
                 <p class="fade-up fragment">Since CloudFront caches your static content. Whenever you want to release new code you have to invalidate those caches.
                 This could cost you upwards of $0.1 a month, though I have never exceeded $0.02.
                 </p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>AWS Cost Breakdown</h2>
+                <ul>
+                    <li class="fragment fade-up">Route 53: $1.50/month</li>
+                    <li class="fragment fade-up">EC2: $0/month</li>
+                    <li class="fragment fade-up">ELB: $0/month</li>
+                    <li class="fragment fade-up">Certificate Manager: $0/month</li>
+                    <li class="fragment fade-up">CloudFront: $0.10/month</li>
+                    <li class="fragment fade-up">S3: $0.0/month</li>
+                </ul>
+            </section>
+            <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+                <h2 style="text-shadow: 3px 0 0 #000, 0 -3px 0 #000, 0 3px 0 #000, -3px 0 0 #000;">Free AWS Services for a Year!</h2>
+            </section>
+            <section>
+                <h2>For the Extremely motivated</h2>
+                <p class="fade-up fragment">You can support your own prod for about $2.00 a month</p>
+                <p class="fade-up fragment">After a year you are looking at about $15 a month</p>
             </section>
         </section>
 
