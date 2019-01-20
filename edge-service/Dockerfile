@@ -5,6 +5,7 @@ ADD ./static-site /static-site
 
 WORKDIR /static-site
 
+RUN npm install
 RUN npm run build
 
 FROM nginx:1.14
