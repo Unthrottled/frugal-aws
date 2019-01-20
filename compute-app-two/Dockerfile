@@ -1,8 +1,11 @@
 FROM node:10.14.1
 
-VOLUME /app
-
 WORKDIR /app
+
+ADD package.json .
+RUN npm install
+
+ADD . .
 
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 
