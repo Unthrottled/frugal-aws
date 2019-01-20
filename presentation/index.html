@@ -370,7 +370,7 @@
             <section>
                 <h2>Entry point</h2>
                 <p class="fade-up fragment">
-                    The entry point to all of our application will be the Route 53 Service
+                    The entry point to all of our applications will be the Route 53 Service
                 </p>
                 <p class="fade-up fragment">
                     All Client-Side communications will remain in HTTPS
@@ -390,8 +390,8 @@
             <section>
                 <h2>EC2</h2>
                 <p class="fragment fade-up">
-                    Is for our servers, this service will run our compute apps and NGINX.
-                    While EBS will save our instances data to a file system.
+                    Elastic Cloud Compute for our servers, this service will run our compute apps and NGINX.
+                    While Elastic Block Store (EBS) will save our instances data to a file system.
                 </p>
                 <p class="fragment fade-up">
                     Super easy instance setup for Docker CE can be found <a href="https://docs.docker.com/docker-for-aws/" target="_blank">here.</a>
@@ -411,14 +411,14 @@
                 <h2>NGINX Configuration</h2>
                 <p class="fade-up fragment">
                     HTTPS Certificates will be the free, trusted <a href="https://github.com/certbot/certbot/tree/master/certbot-dns-route53" target="_blank">Let's Encrypt</a> certificates created to your hosted zone.
-                    Provided by the Route-53 verification plugin.
+                    Provided by the CertBot "Route-53 verification plugin".
                 </p>
                 <p class="fade-up fragment">
                     The use of Host-Headers will allow NGINX to proxy requests based off of the domain supplied to the corresponding service.
                 </p>
                 <p class="fade-up fragment">
                     The host headers will have to be different now that it will be running under an actual domain.
-                    So <strong>https://compute-app-one.localhost</strong> will turn into <strong>compute-app-one.sample-domain.com</strong>
+                    So <strong>https://compute-app-one.localhost</strong> will turn into <strong>https://compute-app-one.sample-domain.com</strong>
                 </p>
             </section>
             <section>
@@ -432,7 +432,7 @@
                 <p class="fade-up fragment">
                     This will require also require for you to have Private Docker Image Repositories.
                     Which will run you $7.00 a month and gives you 6 Private Repositories.
-                    Or you could just go Hardcore mode and get your certs on your EC2 instance via SCP
+                    Or you could just go Hardcore mode and get your certs on your EC2 instance via SCP and build your image locally.
                 </p>
             </section>
             <section>
@@ -465,14 +465,15 @@
                 <ul>
                     <li class="fragment fade-up">Route 53: $1.50/month</li>
                     <li class="fragment fade-up">EC2: $0/month</li>
-                    <li class="fragment fade-up">ELB: $0/month</li>
+                    <li class="fragment fade-up">EBS: $0/month</li>
+                    <li class="fragment fade-up">CloudWatch: $0/month</li>
                     <li class="fragment fade-up">Certificate Manager: $0/month</li>
                     <li class="fragment fade-up">CloudFront: $0.10/month</li>
                     <li class="fragment fade-up">S3: $0.0/month</li>
                 </ul>
             </section>
             <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-                <h2 style="text-shadow: 3px 0 0 #000, 0 -3px 0 #000, 0 3px 0 #000, -3px 0 0 #000;">Free AWS Services for a Year!</h2>
+                <h2 style="color: white; text-shadow: 3px 0 0 #000, 0 -3px 0 #000, 0 3px 0 #000, -3px 0 0 #000;">Free AWS Services for a Year!</h2>
             </section>
             <section>
                 <h2>For the Extremely motivated</h2>
