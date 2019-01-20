@@ -209,11 +209,11 @@
             </section>
             <section>
                 <h2>Static Content</h2>
-                <p class="fragment fade-up">Just a simple html based application that may or may not have a corresponding backed/REST API</p>
+                <p class="fragment fade-up">Just a simple html based application that may or may not have a corresponding backend/REST API</p>
             </section>
             <section>
                 <h2>Web Services</h2>
-                <p class="fragment fade-up">Projects that run servers and normally are accessed from <code>localhost:8080</code> or something like that.</p>
+                <p class="fragment fade-up">Projects that run on/are servers and normally are accessed from <code>localhost:8080</code> or something like that.</p>
                 <p class="fragment fade-up">These may or may not serve static content as well</p>
             </section>
             <section>
@@ -240,10 +240,11 @@
             <section>
                 <h2>Service Provision</h2>
                 <p class="fade-up fragment">
-                    Easily provides things like: Databases, Message Queues, Content Servers
+                    Easily provides things like: Databases, Message Queues, Content Servers.
+                    <br/>Which support our Web Services
                 </p>
                 <p class="fade-up fragment">All <strong>without</strong> having to install any other software</p>
-                <p class="fade-up fragment">Once it works on your machine, then it works in production (provided your compute instance has Docker)</p>
+                <p class="fade-up fragment">Once it works on your machine, then it works in production (provided your compute instance has Docker and made minor tweaks)</p>
             </section>
             <section>
                 <h2>Secure Network Communications</h2>
@@ -306,6 +307,11 @@
                 </p>
             </section>
             <section>
+                <h2>What is NGINX?</h2>
+                <p class="fragment fade-up">NGINX is open source software for serveing static content, proxying requests, and more things.</p>
+                <p class="fragment fade-up">Static content and proxying are just the ones focused on right now.</p>
+            </section>
+            <section>
                 <h2>NGINX Configuration</h2>
                 <p class="fade-up fragment">
                     Self-Signed certificates can be used for the initial HTTPS set up.
@@ -313,6 +319,7 @@
                 </p>
                 <p class="fade-up fragment">
                     The use of Host-Headers will allow NGINX to proxy requests based off of the domain supplied.
+                    Allowing for a single server to handle requests for many domains.
                 </p>
             </section>
             <section>
@@ -330,13 +337,13 @@
                 <h2>The Spring Application</h2>
                 <p class="fade-up fragment">Will be accessible from https://compute-app-one.localhost</p>
                 <p class="fade-up fragment">The static content will be served by the Spring Boot app via the NGINX proxy server.</p>
-                <p class="fade-up fragment">The NGINX server will access the spring boot server via the Docker supplied host name <strong>compute-app-one</strong></p>
+                <p class="fade-up fragment">The NGINX server will access the spring boot server via the Docker supplied host name: <strong>compute-app-one</strong></p>
             </section>
             <section>
                 <h2>The Express Application</h2>
                 <p class="fade-up fragment">Will be accessible from https://compute-app-two.localhost</p>
                 <p class="fade-up fragment">The static content will be served by the Express app via the NGINX proxy server.</p>
-                <p class="fade-up fragment">The NGINX server will access the spring boot server via the Docker supplied host name <strong>compute-app-two</strong></p>
+                <p class="fade-up fragment">The NGINX server will access the spring boot server via the Docker supplied host name: <strong>compute-app-two</strong></p>
             </section>
         </section>
 
