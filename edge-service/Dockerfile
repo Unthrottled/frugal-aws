@@ -11,6 +11,8 @@ RUN npm run build
 FROM nginx:1.14
 MAINTAINER Alex Simons "alexsimons9999@gmail.com"
 
+COPY edge-service/errors/ /usr/share/nginx/html/errors
+
 RUN apt-get update
 RUN apt-get install openssl
 
